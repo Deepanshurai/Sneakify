@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sneakify/src/screens/ClassifyShoes.dart';
 import './src/screens/SignInPage.dart';
 import './src/screens/SignUpPage.dart';
 import './src/screens/HomePage.dart';
@@ -22,6 +23,8 @@ class MyApp extends StatelessWidget {
         '/signin': (BuildContext context) => SignInPage(),
         '/dashboard': (BuildContext context) => Dashboard(),
         '/productPage': (BuildContext context) => ProductPage(),
+        //'/classifypage': (BuildContext context) => ClassifyShoes(),
+        //upar wala route tabh un-comment karna hai jabh pura widget ban jaye warna error dega
       },
     );
   }

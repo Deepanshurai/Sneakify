@@ -51,7 +51,7 @@ class _SignInPageState extends State<SignInPage> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       Text('Welcome Back!', style: h3),
-                      Text('Authenticate Your IDx', style: taglineText),
+                      Text('Authenticate Your ID', style: taglineText),
                       sneakifyTextInput('Username'),
                       sneakifyPasswordInput('Password'),
                       FlatButton(

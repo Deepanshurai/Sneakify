@@ -107,155 +107,155 @@ class _DashboardState extends State<Dashboard> {
 Widget storeTab(BuildContext context) {
   // will pick it up from here
   // am to start another template
-  List<Product> foods = [
+  List<Product> shoes = [
     Product(
-        name: "Hamburger",
+        name: "Balenciaga Speed",
         image: "images/3.png",
-        price: "\$25.00",
+        price: "₹ 50000.00",
         userLiked: true,
         discount: 10),
     Product(
-        name: "Pasta",
+        name: "Air Force 1",
         image: "images/5.png",
-        price: "\$150.00",
+        price: "₹ 6500.00",
         userLiked: false,
         discount: 7.8),
     Product(
-      name: "Akara",
+      name: "Nike Supreme",
       image: 'images/2.png',
-      price: '\$10.99',
+      price: '₹ 18000.00',
       userLiked: false,
     ),
     Product(
-        name: "Strawberry",
+        name: "Old Skool",
         image: "images/1.png",
-        price: '\$50.00',
+        price: '₹ 4800.00',
         userLiked: true,
         discount: 14)
   ];
 
-  List<Product> drinks = [
+  List<Product> sale = [
     Product(
-        name: "Coca-Cola",
+        name: "Travis Scott AJ1",
         image: "images/6.png",
-        price: "\$45.12",
+        price: "₹ 63000.00",
         userLiked: true,
         discount: 2),
     Product(
-        name: "Lemonade",
+        name: "Adidas Boost",
         image: "images/7.png",
-        price: "\$28.00",
+        price: "₹ 7500.00",
         userLiked: false,
         discount: 5.2),
     Product(
-        name: "Vodka",
+        name: "Adidas Alphabounce",
         image: "images/8.png",
-        price: "\$78.99",
-        userLiked: false),
+        price: "₹ 13500.00",
+        userLiked: true),
     Product(
-        name: "Tequila",
+        name: "Bata Power Shoes",
         image: "images/9.png",
-        price: "\$168.99",
-        userLiked: true,
+        price: "₹ 8999.00",
+        userLiked: false,
         discount: 3.4)
   ];
 
   return ListView(children: <Widget>[
     headerTopCategories(),
-    deals('Hot Deals', onViewMore: () {}, items: <Widget>[
-      foodItem(foods[0], onTapped: () {
+    deals('Top Sellers', onViewMore: () {}, items: <Widget>[
+      foodItem(shoes[0], onTapped: () {
         Navigator.push(
           context,
           MaterialPageRoute(
             builder: (context) {
               return new ProductPage(
-                productData: foods[0],
+                productData: shoes[0],
               );
             },
           ),
         );
       }, onLike: () {}),
-      foodItem(foods[1], onTapped: () {
+      foodItem(shoes[1], onTapped: () {
         Navigator.push(
           context,
           MaterialPageRoute(
             builder: (context) {
               return new ProductPage(
-                productData: foods[1],
+                productData: shoes[1],
               );
             },
           ),
         );
       }, imgWidth: 250, onLike: () {}),
-      foodItem(foods[2], onTapped: () {
+      foodItem(shoes[2], onTapped: () {
         Navigator.push(
           context,
           MaterialPageRoute(
             builder: (context) {
               return new ProductPage(
-                productData: foods[2],
+                productData: shoes[2],
               );
             },
           ),
         );
       }, imgWidth: 200, onLike: () {}),
-      foodItem(foods[3], onTapped: () {
+      foodItem(shoes[3], onTapped: () {
         Navigator.push(
           context,
           MaterialPageRoute(
             builder: (context) {
               return new ProductPage(
-                productData: foods[3],
+                productData: shoes[3],
               );
             },
           ),
         );
       }, onLike: () {}),
     ]),
-    deals('Drinks Parol', onViewMore: () {}, items: <Widget>[
-      foodItem(drinks[0], onTapped: () {
+    deals('Hot Deals', onViewMore: () {}, items: <Widget>[
+      foodItem(sale[0], onTapped: () {
         Navigator.push(
           context,
           MaterialPageRoute(
             builder: (context) {
               return new ProductPage(
-                productData: drinks[0],
+                productData: sale[0],
               );
             },
           ),
         );
       }, onLike: () {}, imgWidth: 60),
-      foodItem(drinks[1], onTapped: () {
+      foodItem(sale[1], onTapped: () {
         Navigator.push(
           context,
           MaterialPageRoute(
             builder: (context) {
               return new ProductPage(
-                productData: drinks[1],
+                productData: sale[1],
               );
             },
           ),
         );
       }, onLike: () {}, imgWidth: 75),
-      foodItem(drinks[2], onTapped: () {
+      foodItem(sale[2], onTapped: () {
         Navigator.push(
           context,
           MaterialPageRoute(
             builder: (context) {
               return new ProductPage(
-                productData: drinks[2],
+                productData: sale[2],
               );
             },
           ),
         );
       }, imgWidth: 110, onLike: () {}),
-      foodItem(drinks[3], onTapped: () {
+      foodItem(sale[3], onTapped: () {
         Navigator.push(
           context,
           MaterialPageRoute(
             builder: (context) {
               return new ProductPage(
-                productData: drinks[3],
+                productData: sale[3],
               );
             },
           ),
@@ -298,12 +298,11 @@ Widget headerTopCategories() {
           scrollDirection: Axis.horizontal,
           shrinkWrap: true,
           children: <Widget>[
-            headerCategoryItem('Frieds', Sneakify.dinner, onPressed: () {}),
-            headerCategoryItem('Fast Food', Sneakify.food, onPressed: () {}),
-            headerCategoryItem('Creamery', Sneakify.poop, onPressed: () {}),
-            headerCategoryItem('Hot Drinks', Sneakify.coffee_cup,
+            headerCategoryItem('Classify', Sneakify.eye, onPressed: () {}),
+            headerCategoryItem('Authenticate', Sneakify.database,
                 onPressed: () {}),
-            headerCategoryItem('Vegetables', Sneakify.leaf, onPressed: () {}),
+            headerCategoryItem('Favorites', Sneakify.heart, onPressed: () {}),
+            headerCategoryItem('Camera', Sneakify.camera, onPressed: () {}),
           ],
         ),
       )
